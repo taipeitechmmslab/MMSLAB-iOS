@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UkN-0V-ADT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Zng-qT-FbW">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7Q-j2-HoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="UkN-0V-ADT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uXQ-ld-V3J">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e2V-x2-XUn"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-543" y="115"/>
+        </scene>
+        <!--首頁-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y01-vt-9kt">
+                                <rect key="frame" x="10" y="94" width="355" height="543"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4b-n5-Fgk">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="121"/>
+                                        <state key="normal" title="Alert選擇視窗(Action Sheet)"/>
+                                        <connections>
+                                            <action selector="demoAlertActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cse-ar-KQX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmm-if-Tmh">
+                                        <rect key="frame" x="0.0" y="141" width="355" height="120.5"/>
+                                        <state key="normal" title="Alert問答視窗(Alert 多個選項)"/>
+                                        <connections>
+                                            <action selector="demoAlertView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxe-FT-BjF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgW-Ks-tY6">
+                                        <rect key="frame" x="0.0" y="281.5" width="355" height="121"/>
+                                        <state key="normal" title="登入(Alert 使用者輸入)"/>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KdX-jq-oJM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiB-I7-FrE">
+                                        <rect key="frame" x="0.0" y="422.5" width="355" height="120.5"/>
+                                        <state key="normal" title="客製化Popup View"/>
+                                        <connections>
+                                            <action selector="showCustomPopupView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f04-8L-Nlx"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mgW-Ks-tY6" firstAttribute="height" secondItem="J4b-n5-Fgk" secondAttribute="height" id="UHT-NR-Uwf"/>
+                                    <constraint firstItem="lmm-if-Tmh" firstAttribute="height" secondItem="J4b-n5-Fgk" secondAttribute="height" id="WaG-sC-a33"/>
+                                    <constraint firstItem="OiB-I7-FrE" firstAttribute="height" secondItem="J4b-n5-Fgk" secondAttribute="height" id="gSj-nv-Yv4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y01-vt-9kt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R97-Ib-48s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y01-vt-9kt" secondAttribute="trailing" constant="10" id="V4U-DL-qRn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="y01-vt-9kt" secondAttribute="bottom" constant="30" id="u3t-Kq-vto"/>
+                            <constraint firstItem="y01-vt-9kt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="zK4-c2-Hfh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="首頁" id="dk5-6V-4bf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="115"/>
+        </scene>
+    </scenes>
+</document>

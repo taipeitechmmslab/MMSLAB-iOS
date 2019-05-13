@@ -1,0 +1,22 @@
+PODS:
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - Toast (4.0.0)
+
+DEPENDENCIES:
+  - Realm
+  - Toast
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Realm
+    - Toast
+
+SPEC CHECKSUMS:
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+
+PODFILE CHECKSUM: 9178e77372e2cdf4f4b834ba83bf1f73ffd06c15
+
+COCOAPODS: 1.5.3
