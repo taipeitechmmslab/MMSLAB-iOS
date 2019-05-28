@@ -1,2 +1,3 @@
-# MMSLAB-iOS
-MMSLAB-iOS Book
+# 此模型僅供參考
+此模型為自行製作的
+僅提供測試使用
