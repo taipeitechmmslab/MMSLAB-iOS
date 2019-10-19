@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c1M-vf-Lgv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--縮放功能-->
+        <scene sceneID="Kkz-Cq-He5">
+            <objects>
+                <viewController id="c1M-vf-Lgv" customClass="zoomingVC" customModule="lab5_exercize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="glB-kF-XHv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZjZ-xv-nOX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-IG-mTA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                                        <connections>
+                                            <segue destination="Bni-6B-DCq" kind="embed" id="8er-JN-WUt"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="height" secondItem="NSq-39-QNB" secondAttribute="height" id="Df4-8L-0iT"/>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="width" secondItem="NSq-39-QNB" secondAttribute="width" id="HYh-ms-W47"/>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="trailing" secondItem="u2j-5T-hxa" secondAttribute="trailing" id="Jm1-Wt-cZ9"/>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="leading" secondItem="u2j-5T-hxa" secondAttribute="leading" id="V7q-D0-dyU"/>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="top" secondItem="u2j-5T-hxa" secondAttribute="top" id="X4b-N4-ZwV"/>
+                                    <constraint firstItem="2fO-IG-mTA" firstAttribute="bottom" secondItem="u2j-5T-hxa" secondAttribute="bottom" id="cjT-RK-dEQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="u2j-5T-hxa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="NSq-39-QNB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="c1M-vf-Lgv" id="b97-uN-TW7"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZjZ-xv-nOX" firstAttribute="leading" secondItem="Lea-O6-kck" secondAttribute="leading" id="BQ2-rH-gUC"/>
+                            <constraint firstItem="Lea-O6-kck" firstAttribute="trailing" secondItem="ZjZ-xv-nOX" secondAttribute="trailing" id="CLG-LD-YEd"/>
+                            <constraint firstItem="ZjZ-xv-nOX" firstAttribute="top" secondItem="Lea-O6-kck" secondAttribute="top" id="iVl-OF-Vfm"/>
+                            <constraint firstItem="Lea-O6-kck" firstAttribute="bottom" secondItem="ZjZ-xv-nOX" secondAttribute="bottom" id="pX0-g1-k6N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lea-O6-kck"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="縮放功能" image="zoom" selectedImage="zoom_selected" id="R1V-3j-mZv"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="containerView" destination="2fO-IG-mTA" id="Ovu-q3-H1q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Boc-Np-aZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4" y="143"/>
+        </scene>
+        <!--Zooming ContainerVC-->
+        <scene sceneID="wd3-1u-sGR">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BjB-vH-4hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="Bni-6B-DCq" customClass="zoomingContainerVC" customModule="lab5_exercize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eOg-Ib-rTs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cueNoPost" translatesAutoresizingMaskIntoConstraints="NO" id="8O9-88-Cm1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="725"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lBJ-UV-UlE" firstAttribute="bottom" secondItem="8O9-88-Cm1" secondAttribute="bottom" id="7P4-w7-DYj"/>
+                            <constraint firstItem="lBJ-UV-UlE" firstAttribute="trailing" secondItem="8O9-88-Cm1" secondAttribute="trailing" id="Ahp-Fg-C6t"/>
+                            <constraint firstItem="8O9-88-Cm1" firstAttribute="top" secondItem="lBJ-UV-UlE" secondAttribute="top" id="Buq-yq-H97"/>
+                            <constraint firstItem="8O9-88-Cm1" firstAttribute="leading" secondItem="lBJ-UV-UlE" secondAttribute="leading" id="I68-rZ-Tjh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lBJ-UV-UlE"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="665" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_cueNoPost" width="102" height="120.5"/>
+        <image name="zoom" width="25" height="25"/>
+        <image name="zoom_selected" width="25" height="25"/>
+    </resources>
+</document>

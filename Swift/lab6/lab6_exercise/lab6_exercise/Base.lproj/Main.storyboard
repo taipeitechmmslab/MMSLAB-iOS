@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab6_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nb-64-MXR">
+                                <rect key="frame" x="113" y="97" width="188" height="30"/>
+                                <state key="normal" title="alert選擇視窗(action sheet)"/>
+                                <connections>
+                                    <action selector="demoAlertActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="khD-Cd-Yd7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7G-Wl-H59">
+                                <rect key="frame" x="109" y="321" width="196" height="30"/>
+                                <state key="normal" title="alert問答視窗(alert多個選項)"/>
+                                <connections>
+                                    <action selector="demoAlertView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="djb-cz-QOh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vL-tj-lFL">
+                                <rect key="frame" x="130" y="545" width="154" height="30"/>
+                                <state key="normal" title="登入(alert 使用者登入)"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQq-5E-Jqt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r6D-kP-lvp">
+                                <rect key="frame" x="144.5" y="769" width="125" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="客製化popup view"/>
+                                <connections>
+                                    <action selector="showCustomPopup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cin-3b-XOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6nb-64-MXR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.25" id="COG-WR-5hx"/>
+                            <constraint firstItem="3vL-tj-lFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LZj-Xo-dG4"/>
+                            <constraint firstItem="6nb-64-MXR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SeW-kN-lUG"/>
+                            <constraint firstItem="n7G-Wl-H59" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WFy-Ja-gwI"/>
+                            <constraint firstItem="r6D-kP-lvp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="XOA-KB-9hw"/>
+                            <constraint firstItem="3vL-tj-lFL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.25" id="eoY-1g-FQ5"/>
+                            <constraint firstItem="n7G-Wl-H59" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.75" id="s87-va-LBa"/>
+                            <constraint firstItem="r6D-kP-lvp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u5p-qe-qFv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="-1"/>
+        </scene>
+    </scenes>
+</document>

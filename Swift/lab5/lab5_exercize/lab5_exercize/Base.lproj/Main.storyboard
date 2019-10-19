@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F2i-rj-zrm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KB3-yl-VSf">
+            <objects>
+                <tabBarController id="F2i-rj-zrm" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6NL-Wx-cVF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VPW-wn-krw" kind="relationship" relationship="viewControllers" id="4bR-te-fkp"/>
+                        <segue destination="ATZ-Bu-bhu" kind="relationship" relationship="viewControllers" id="CvU-cR-ZqA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eeg-bc-Nqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="88"/>
+        </scene>
+        <!--scrolling-->
+        <scene sceneID="37G-eO-eJj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="scrolling" id="VPW-wn-krw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="滑頁功能" image="scroll" selectedImage="scroll_selected" id="EzO-pp-nEB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9u-rn-qbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-121" y="506"/>
+        </scene>
+        <!--zooming-->
+        <scene sceneID="X9s-G4-22e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="zooming" id="ATZ-Bu-bhu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="縮放功能" image="zoom" selectedImage="zoom_selected" id="91T-58-tMz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uzi-th-1Dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="506"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scroll" width="25" height="25"/>
+        <image name="scroll_selected" width="25" height="25"/>
+        <image name="zoom" width="25" height="25"/>
+        <image name="zoom_selected" width="25" height="25"/>
+    </resources>
+</document>

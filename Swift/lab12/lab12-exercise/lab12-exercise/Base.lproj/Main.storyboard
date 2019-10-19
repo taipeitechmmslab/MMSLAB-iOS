@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab12_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="書名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLF-tm-oxZ">
+                                <rect key="frame" x="10" y="54" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="價格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q90-Hh-Cnq">
+                                <rect key="frame" x="10" y="99.5" width="35" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="teI-F1-kyN">
+                                <rect key="frame" x="60" y="47.5" width="339" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Fc-p2-rVx">
+                                <rect key="frame" x="60" y="93" width="339" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7z9-eV-LcI">
+                                <rect key="frame" x="15" y="152" width="384" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN1-8a-Kqy">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="查詢"/>
+                                        <connections>
+                                            <action selector="searchBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7jz-1H-ABB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWJ-Dw-udt">
+                                        <rect key="frame" x="96" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="新增"/>
+                                        <connections>
+                                            <action selector="addNewBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2W-sa-7E9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFy-OY-484">
+                                        <rect key="frame" x="192" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="修改"/>
+                                        <connections>
+                                            <action selector="editBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ueq-Ky-kgt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DJ-hw-Cin">
+                                        <rect key="frame" x="288" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="刪除"/>
+                                        <connections>
+                                            <action selector="removeBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOb-QB-bRc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QrH-aa-rTv">
+                                <rect key="frame" x="0.0" y="182" width="414" height="680"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d2I-ob-JeE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fog-gL-zEw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7z9-eV-LcI" secondAttribute="trailing" constant="15" id="1yu-Tu-tV9"/>
+                            <constraint firstItem="7z9-eV-LcI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="3P3-tk-Tn7"/>
+                            <constraint firstItem="gLF-tm-oxZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3gV-xm-7j5"/>
+                            <constraint firstItem="gLF-tm-oxZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="7H8-Ua-Yyh"/>
+                            <constraint firstItem="q90-Hh-Cnq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="7S5-7R-AGy"/>
+                            <constraint firstItem="teI-F1-kyN" firstAttribute="centerY" secondItem="gLF-tm-oxZ" secondAttribute="centerY" id="NTW-68-StI"/>
+                            <constraint firstItem="QrH-aa-rTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YLy-Xf-Wbo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="teI-F1-kyN" secondAttribute="trailing" constant="15" id="dQD-0M-J4B"/>
+                            <constraint firstItem="6Fc-p2-rVx" firstAttribute="leading" secondItem="q90-Hh-Cnq" secondAttribute="trailing" constant="15" id="eLn-xk-9bD"/>
+                            <constraint firstItem="q90-Hh-Cnq" firstAttribute="top" secondItem="gLF-tm-oxZ" secondAttribute="bottom" constant="25" id="epd-Oe-Sz8"/>
+                            <constraint firstItem="7z9-eV-LcI" firstAttribute="top" secondItem="6Fc-p2-rVx" secondAttribute="bottom" constant="25" id="h3m-Yf-avm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Fc-p2-rVx" secondAttribute="trailing" constant="15" id="jWq-eg-x8P"/>
+                            <constraint firstItem="QrH-aa-rTv" firstAttribute="top" secondItem="7z9-eV-LcI" secondAttribute="bottom" id="skz-I6-VQH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QrH-aa-rTv" secondAttribute="trailing" id="t5b-AQ-JKk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QrH-aa-rTv" secondAttribute="bottom" id="tiQ-wv-Rfq"/>
+                            <constraint firstItem="6Fc-p2-rVx" firstAttribute="centerY" secondItem="q90-Hh-Cnq" secondAttribute="centerY" id="ybm-TV-eOW"/>
+                            <constraint firstItem="teI-F1-kyN" firstAttribute="leading" secondItem="gLF-tm-oxZ" secondAttribute="trailing" constant="15" id="z8d-yj-6Ym"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="teI-F1-kyN" id="g3i-Ze-nOi"/>
+                        <outlet property="priceTextField" destination="6Fc-p2-rVx" id="sXD-zy-v59"/>
+                        <outlet property="tableView" destination="QrH-aa-rTv" id="gww-iF-hAT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="124"/>
+        </scene>
+    </scenes>
+</document>

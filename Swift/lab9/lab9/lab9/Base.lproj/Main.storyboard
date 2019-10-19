@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OGt-zd-SAH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--畫面 2-->
+        <scene sceneID="9uE-QH-wui">
+            <objects>
+                <viewController id="un2-eu-Xp7" customClass="secondVC" customModule="lab9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOq-gD-wB1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面二" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzE-it-yYo">
+                                <rect key="frame" x="161.5" y="79" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入要發送的訊息" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u2P-gt-Ie9">
+                                <rect key="frame" x="15" y="130" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiW-4U-3Vg">
+                                <rect key="frame" x="161" y="194" width="92" height="30"/>
+                                <state key="normal" title="發送至畫面三"/>
+                                <connections>
+                                    <action selector="regionNotificationSend:" destination="un2-eu-Xp7" eventType="touchUpInside" id="flV-Lu-mOA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01s-cn-cf0">
+                                <rect key="frame" x="145.5" y="254" width="123" height="30"/>
+                                <state key="normal" title="開啟系統鍵盤通知"/>
+                                <connections>
+                                    <action selector="registerKeyBoardNotification:" destination="un2-eu-Xp7" eventType="touchUpInside" id="2Ho-HL-wDl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="發送者：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCq-Er-hYS">
+                                <rect key="frame" x="20" y="304" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IvE-ye-sMG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訊息內容：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0r-I0-UXP">
+                                <rect key="frame" x="20" y="345" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YsC-hx-VpC">
+                                <rect key="frame" x="130" y="304" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQB-MQ-h5p">
+                                <rect key="frame" x="130" y="345" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epx-5J-E8W">
+                                <rect key="frame" x="133" y="396" width="148.5" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="u0r-I0-UXP" firstAttribute="width" secondItem="hCq-Er-hYS" secondAttribute="width" id="0Gx-te-9pc"/>
+                            <constraint firstItem="hCq-Er-hYS" firstAttribute="leading" secondItem="FJF-hf-HsA" secondAttribute="leading" constant="20" id="2Xp-oL-kqb"/>
+                            <constraint firstItem="01s-cn-cf0" firstAttribute="centerX" secondItem="xOq-gD-wB1" secondAttribute="centerX" id="7o6-sV-IkH"/>
+                            <constraint firstItem="JiW-4U-3Vg" firstAttribute="centerX" secondItem="xOq-gD-wB1" secondAttribute="centerX" id="CjW-P0-gA4"/>
+                            <constraint firstItem="FJF-hf-HsA" firstAttribute="trailing" secondItem="u2P-gt-Ie9" secondAttribute="trailing" constant="15" id="EH4-5r-ETf"/>
+                            <constraint firstItem="epx-5J-E8W" firstAttribute="top" secondItem="NQB-MQ-h5p" secondAttribute="bottom" constant="30" id="MFu-jd-MZM"/>
+                            <constraint firstItem="JiW-4U-3Vg" firstAttribute="top" secondItem="u2P-gt-Ie9" secondAttribute="bottom" constant="30" id="Ngu-MB-R4L"/>
+                            <constraint firstItem="YsC-hx-VpC" firstAttribute="leading" secondItem="hCq-Er-hYS" secondAttribute="trailing" constant="10" id="QDQ-Co-Tg8"/>
+                            <constraint firstItem="NQB-MQ-h5p" firstAttribute="centerY" secondItem="u0r-I0-UXP" secondAttribute="centerY" id="SQi-cc-p8c"/>
+                            <constraint firstItem="hCq-Er-hYS" firstAttribute="top" secondItem="01s-cn-cf0" secondAttribute="bottom" constant="20" id="UaQ-5U-hbj"/>
+                            <constraint firstItem="epx-5J-E8W" firstAttribute="centerX" secondItem="xOq-gD-wB1" secondAttribute="centerX" id="VVV-RM-lnC"/>
+                            <constraint firstItem="u2P-gt-Ie9" firstAttribute="top" secondItem="AzE-it-yYo" secondAttribute="bottom" constant="15" id="Zal-fl-pdS"/>
+                            <constraint firstItem="NQB-MQ-h5p" firstAttribute="leading" secondItem="u0r-I0-UXP" secondAttribute="trailing" constant="10" id="h6w-TW-zxz"/>
+                            <constraint firstItem="u0r-I0-UXP" firstAttribute="top" secondItem="hCq-Er-hYS" secondAttribute="bottom" constant="20" id="iBg-pG-zP3"/>
+                            <constraint firstItem="01s-cn-cf0" firstAttribute="top" secondItem="JiW-4U-3Vg" secondAttribute="bottom" constant="30" id="jzj-se-dUo"/>
+                            <constraint firstItem="YsC-hx-VpC" firstAttribute="centerY" secondItem="hCq-Er-hYS" secondAttribute="centerY" id="l6k-Tx-bzY"/>
+                            <constraint firstItem="AzE-it-yYo" firstAttribute="top" secondItem="FJF-hf-HsA" secondAttribute="top" constant="35" id="tYl-PS-iqB"/>
+                            <constraint firstItem="u0r-I0-UXP" firstAttribute="leading" secondItem="FJF-hf-HsA" secondAttribute="leading" constant="20" id="vvo-R1-piw"/>
+                            <constraint firstItem="u2P-gt-Ie9" firstAttribute="leading" secondItem="FJF-hf-HsA" secondAttribute="leading" constant="15" id="wMY-i7-uXh"/>
+                            <constraint firstItem="AzE-it-yYo" firstAttribute="centerX" secondItem="xOq-gD-wB1" secondAttribute="centerX" id="xav-p8-9Df"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FJF-hf-HsA"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="roa-v9-aDh" appends="YES" id="xlD-H9-uKL"/>
+                        </connections>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面 2" id="U1Q-DV-5sd"/>
+                    <connections>
+                        <outlet property="keyBoardBtn" destination="01s-cn-cf0" id="c7z-EM-31l"/>
+                        <outlet property="msg" destination="NQB-MQ-h5p" id="qHk-fH-gri"/>
+                        <outlet property="msgTextField" destination="u2P-gt-Ie9" id="ari-jK-U8C"/>
+                        <outlet property="sender" destination="YsC-hx-VpC" id="Vgg-ko-Irs"/>
+                        <outlet property="timeLabel" destination="epx-5J-E8W" id="K2E-CY-p5O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-Bn-pI1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="roa-v9-aDh">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="un2-eu-Xp7" id="xYg-m6-h01"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="600" y="-485"/>
+        </scene>
+        <!--畫面 3-->
+        <scene sceneID="5uO-L4-J8H">
+            <objects>
+                <viewController id="aMN-l5-e97" customClass="thirdVC" customModule="lab9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WKn-wz-S2H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面三" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9P1-g2-k1G">
+                                <rect key="frame" x="161.5" y="74" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="發送者：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHo-sJ-pDL">
+                                <rect key="frame" x="20" y="130" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eRt-4C-yG4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="訊息內容：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J21-Nx-u15">
+                                <rect key="frame" x="20" y="171" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIA-DZ-h1q">
+                                <rect key="frame" x="130" y="130" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-ws-ylc">
+                                <rect key="frame" x="130" y="171" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc7-6f-8vJ">
+                                <rect key="frame" x="143.5" y="227" width="127.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9P1-g2-k1G" firstAttribute="top" secondItem="MpA-0f-L3F" secondAttribute="top" constant="30" id="1xt-LK-riW"/>
+                            <constraint firstItem="J21-Nx-u15" firstAttribute="leading" secondItem="MpA-0f-L3F" secondAttribute="leading" constant="20" id="7pp-QR-WBp"/>
+                            <constraint firstItem="oc7-6f-8vJ" firstAttribute="top" secondItem="KEP-ws-ylc" secondAttribute="bottom" constant="35" id="B6Z-uo-5MG"/>
+                            <constraint firstItem="KEP-ws-ylc" firstAttribute="leading" secondItem="J21-Nx-u15" secondAttribute="trailing" constant="10" id="CAC-xV-BaV"/>
+                            <constraint firstItem="gHo-sJ-pDL" firstAttribute="leading" secondItem="MpA-0f-L3F" secondAttribute="leading" constant="20" id="IPm-fW-1C9"/>
+                            <constraint firstItem="J21-Nx-u15" firstAttribute="width" secondItem="gHo-sJ-pDL" secondAttribute="width" id="J9I-h4-ZrA"/>
+                            <constraint firstItem="J21-Nx-u15" firstAttribute="top" secondItem="gHo-sJ-pDL" secondAttribute="bottom" constant="20" id="Ljq-7s-svy"/>
+                            <constraint firstItem="hIA-DZ-h1q" firstAttribute="centerY" secondItem="gHo-sJ-pDL" secondAttribute="centerY" id="OLm-ac-y79"/>
+                            <constraint firstItem="hIA-DZ-h1q" firstAttribute="leading" secondItem="gHo-sJ-pDL" secondAttribute="trailing" constant="10" id="Peh-9o-b22"/>
+                            <constraint firstItem="gHo-sJ-pDL" firstAttribute="top" secondItem="9P1-g2-k1G" secondAttribute="bottom" constant="20" id="aHN-qv-gbk"/>
+                            <constraint firstItem="9P1-g2-k1G" firstAttribute="centerX" secondItem="WKn-wz-S2H" secondAttribute="centerX" id="eIY-vZ-Kip"/>
+                            <constraint firstItem="KEP-ws-ylc" firstAttribute="centerY" secondItem="J21-Nx-u15" secondAttribute="centerY" id="icf-UR-myg"/>
+                            <constraint firstItem="oc7-6f-8vJ" firstAttribute="centerX" secondItem="WKn-wz-S2H" secondAttribute="centerX" id="qtS-Ag-ei9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MpA-0f-L3F"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面 3" id="BTz-X3-Wbu"/>
+                    <connections>
+                        <outlet property="msg" destination="KEP-ws-ylc" id="JPx-QK-J8m"/>
+                        <outlet property="sender" destination="hIA-DZ-h1q" id="8Lp-Cc-3GK"/>
+                        <outlet property="timeLabel" destination="oc7-6f-8vJ" id="dpF-Az-r2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O16-7x-pxD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1270" y="-485"/>
+        </scene>
+        <!--畫面 1-->
+        <scene sceneID="xa9-jh-0Pf">
+            <objects>
+                <viewController id="xtb-Xj-zc3" customClass="firstVC" customModule="lab9" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NwO-i9-b3A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="畫面一" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR4-4V-fMg">
+                                <rect key="frame" x="161.5" y="79" width="91" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6d-cS-wsB">
+                                <rect key="frame" x="161" y="150" width="92" height="30"/>
+                                <state key="normal" title="註冊全域通知"/>
+                                <connections>
+                                    <action selector="registerPublicNotification:" destination="xtb-Xj-zc3" eventType="touchUpInside" id="jlD-D3-Sf0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-WA-B4P">
+                                <rect key="frame" x="176" y="220" width="62" height="30"/>
+                                <state key="normal" title="開始計時"/>
+                                <connections>
+                                    <action selector="startCount:" destination="xtb-Xj-zc3" eventType="touchUpInside" id="FCs-PI-gi2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oq-BJ-kiW">
+                                <rect key="frame" x="143.5" y="300" width="127.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YR4-4V-fMg" firstAttribute="top" secondItem="QjX-gL-53E" secondAttribute="top" constant="35" id="ISi-gK-ds8"/>
+                            <constraint firstItem="2Oq-BJ-kiW" firstAttribute="centerX" secondItem="NwO-i9-b3A" secondAttribute="centerX" id="UTT-sK-BLX"/>
+                            <constraint firstItem="YR4-4V-fMg" firstAttribute="centerX" secondItem="NwO-i9-b3A" secondAttribute="centerX" id="aZ8-CY-9Kj"/>
+                            <constraint firstItem="R6d-cS-wsB" firstAttribute="top" secondItem="YR4-4V-fMg" secondAttribute="bottom" constant="35" id="dNK-Lw-9g4"/>
+                            <constraint firstItem="OhU-WA-B4P" firstAttribute="centerX" secondItem="NwO-i9-b3A" secondAttribute="centerX" id="hl3-Kb-FoO"/>
+                            <constraint firstItem="OhU-WA-B4P" firstAttribute="top" secondItem="R6d-cS-wsB" secondAttribute="bottom" constant="40" id="kBf-Ex-3mS"/>
+                            <constraint firstItem="2Oq-BJ-kiW" firstAttribute="top" secondItem="OhU-WA-B4P" secondAttribute="bottom" constant="50" id="oz3-3F-Pfc"/>
+                            <constraint firstItem="R6d-cS-wsB" firstAttribute="centerX" secondItem="NwO-i9-b3A" secondAttribute="centerX" id="ubx-Am-bes"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QjX-gL-53E"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="畫面 1" id="bQc-y9-1YV"/>
+                    <connections>
+                        <outlet property="registerBtn" destination="R6d-cS-wsB" id="KoB-1l-0TU"/>
+                        <outlet property="strartTimeBtn" destination="OhU-WA-B4P" id="N4z-Eg-Mc3"/>
+                        <outlet property="timeLabel" destination="2Oq-BJ-kiW" id="25i-8w-hzA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rur-g2-vCh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-77" y="-485"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PON-HZ-VvH">
+            <objects>
+                <tabBarController id="OGt-zd-SAH" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bbn-kF-NrG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xtb-Xj-zc3" kind="relationship" relationship="viewControllers" id="MjO-3S-9Kb"/>
+                        <segue destination="un2-eu-Xp7" kind="relationship" relationship="viewControllers" id="a2Q-DJ-zQP"/>
+                        <segue destination="aMN-l5-e97" kind="relationship" relationship="viewControllers" id="7Gq-4k-c49"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYZ-ao-9Dp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-752" y="-485"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab10_1_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsBuildings="NO" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZL-Wo-LrY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eYI-ee-6q5"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4F-iy-H5y">
+                                <rect key="frame" x="302" y="54" width="92" height="30"/>
+                                <state key="normal" title="顯示所有標注"/>
+                                <connections>
+                                    <action selector="showAllAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jjo-TN-7xs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t50-TO-PCG">
+                                <rect key="frame" x="176" y="54" width="62" height="30"/>
+                                <state key="normal" title="我的位置"/>
+                                <connections>
+                                    <action selector="showMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DiF-2u-N5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrM-6C-zLm">
+                                <rect key="frame" x="10" y="54" width="92" height="30"/>
+                                <state key="normal" title="刪除所有標注"/>
+                                <connections>
+                                    <action selector="deleteAllAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3TQ-HB-gRZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ku9-6s-RXx">
+                                <rect key="frame" x="342" y="822" width="62" height="30"/>
+                                <state key="normal" title="新增標注"/>
+                                <connections>
+                                    <action selector="addAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWa-lO-8BB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yn-La-MHQ">
+                                <rect key="frame" x="327" y="782" width="77" height="30"/>
+                                <state key="normal" title="下一個標注"/>
+                                <connections>
+                                    <action selector="changeAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kl5-5U-O45"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7db-KC-uaJ">
+                                <rect key="frame" x="10" y="822" width="62" height="30"/>
+                                <state key="normal" title="移除標注"/>
+                                <connections>
+                                    <action selector="removeAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxb-Dm-24g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbL-0B-sC3">
+                                <rect key="frame" x="10" y="782" width="77" height="30"/>
+                                <state key="normal" title="上一個標注"/>
+                                <connections>
+                                    <action selector="changeAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nr7-zV-ds3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r4F-iy-H5y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="2l0-oC-rNO"/>
+                            <constraint firstItem="7db-KC-uaJ" firstAttribute="top" secondItem="pbL-0B-sC3" secondAttribute="bottom" constant="10" id="37z-VK-ScR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ku9-6s-RXx" secondAttribute="trailing" constant="10" id="GSQ-lM-JuP"/>
+                            <constraint firstItem="tZL-Wo-LrY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N2G-jR-jVN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tZL-Wo-LrY" secondAttribute="bottom" id="ORo-Wo-Iq9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7db-KC-uaJ" secondAttribute="bottom" constant="10" id="Pwk-tB-1mk"/>
+                            <constraint firstItem="t50-TO-PCG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIV-P0-Oo9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7yn-La-MHQ" secondAttribute="trailing" constant="10" id="WjT-ke-Uqa"/>
+                            <constraint firstItem="tZL-Wo-LrY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aFZ-J5-rtP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ku9-6s-RXx" secondAttribute="bottom" constant="10" id="alX-95-XH3"/>
+                            <constraint firstItem="MrM-6C-zLm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="cec-0n-uTz"/>
+                            <constraint firstItem="Ku9-6s-RXx" firstAttribute="top" secondItem="7yn-La-MHQ" secondAttribute="bottom" constant="10" id="d6M-dq-sby"/>
+                            <constraint firstItem="pbL-0B-sC3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="dgg-R6-Bjm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r4F-iy-H5y" secondAttribute="trailing" constant="20" id="hn9-Iz-4ed"/>
+                            <constraint firstItem="MrM-6C-zLm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="kjs-DS-Kl3"/>
+                            <constraint firstItem="7db-KC-uaJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="sEN-7A-lPA"/>
+                            <constraint firstItem="t50-TO-PCG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="t5g-BF-qrv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tZL-Wo-LrY" secondAttribute="trailing" id="uKB-cv-wmE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="tZL-Wo-LrY" id="kmf-BQ-Xb1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="124"/>
+        </scene>
+    </scenes>
+</document>

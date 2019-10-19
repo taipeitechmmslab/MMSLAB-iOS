@@ -1,0 +1,6 @@
+framework module Pods_lab14_exercise {
+  umbrella header "Pods-lab14-exercise-umbrella.h"
+
+  export *
+  module * { export * }
+}

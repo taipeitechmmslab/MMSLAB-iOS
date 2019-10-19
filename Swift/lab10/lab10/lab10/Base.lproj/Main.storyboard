@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab10" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOX-3C-tK2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Y6K-py-FZA"/>
+                                </connections>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="7q8-FL-ofS">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdX-vM-XpR">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="新增標註"/>
+                                        <connections>
+                                            <action selector="addAnnotation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XD3-Jc-fir"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giK-3a-GJu">
+                                        <rect key="frame" x="133" y="0.0" width="108" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="顯示我的位置"/>
+                                        <connections>
+                                            <action selector="showMyLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="arq-QY-fnh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLG-DJ-A01">
+                                        <rect key="frame" x="266" y="0.0" width="108" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="新增折線"/>
+                                        <connections>
+                                            <action selector="addPolyline:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUq-TV-Pcu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VLG-DJ-A01" firstAttribute="width" secondItem="DdX-vM-XpR" secondAttribute="width" id="Orr-rK-Mne"/>
+                                    <constraint firstItem="giK-3a-GJu" firstAttribute="width" secondItem="DdX-vM-XpR" secondAttribute="width" id="t8n-Z2-pmP"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zOX-3C-tK2" secondAttribute="bottom" id="7gE-QV-EH0"/>
+                            <constraint firstItem="7q8-FL-ofS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TGk-RI-Wnm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7q8-FL-ofS" secondAttribute="trailing" constant="20" id="gOc-ej-21N"/>
+                            <constraint firstItem="7q8-FL-ofS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="i24-aX-tQV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zOX-3C-tK2" secondAttribute="trailing" id="r9V-DZ-ue9"/>
+                            <constraint firstItem="zOX-3C-tK2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tkF-vx-wDi"/>
+                            <constraint firstItem="zOX-3C-tK2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xOQ-9L-r9K"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="zOX-3C-tK2" id="mTC-GC-S0S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+    </scenes>
+</document>
